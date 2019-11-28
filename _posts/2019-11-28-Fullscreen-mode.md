@@ -1,9 +1,7 @@
 ---
 layout: post
-title: Fullscreen mode
+title: Fullscreen mode in MinnoJS
 ---
-
-# Fullscreen mode in MinnoJS
 
 Sometimes it is usefull to have your task run in fullscreen mode.
 One way to do this, is to ask your participants to press `F11` (or `^Cmd+F` on Safari).
