@@ -15,7 +15,7 @@ The logger takes a settings object with four properties: `onRow`, `onEnd`, `seri
 They are all required and each refers to a different part of the logging proccess.
 We will go through each on and explain how it works.
 
-*`onRow`*: Each log gets called once with `onRow`.
+**`onRow`**: Each log gets called once with `onRow`.
 This is our chance to manipulate each data row and extract the specific data that we want (in this case only latency and trial score).
 If the `onRow` function returns anything it gets immidiately serialized and sent.
 In our case we want to "send" the data only at the end, so what we want to do is set aside the data until we are ready to save it.
@@ -28,7 +28,7 @@ function(logName, log, settings, ctx){
 }
 ```
 
-*`onEnd`*: This function gets called once at the end of the task.
+**`onEnd`**: This function gets called once at the end of the task.
 It is our chance to wrap up logging and do something with the logs that we saved into the context.
 We tell the logger to log the logs simply by returning them:
 
@@ -38,7 +38,7 @@ function(name, settings, ctx){
 }
 ```
 
-*`serialize`*: This function allows you to transform the log objects that are returned by `onRow` and `onEnd`.
+**`serialize`**: This function allows you to transform the log objects that are returned by `onRow` and `onEnd`.
 In this case we simply transform them into [JSON](https://en.wikipedia.org/wiki/JSON) strings.
 
 ```js
@@ -47,7 +47,7 @@ function(name, logs, settings){
 }
 ```
 
-*`send`*: This function performs the actual sending of the serialized data.
+**`send`**: This function performs the actual sending of the serialized data.
 In our case all we want to do is set the results in a text input.
 If you are integrating with a server, this is where you would put the code to update it.
 
@@ -70,9 +70,11 @@ API.addSettings('logger', {
     onEnd: function(name, settings, ctx){
         return ctx.logs;
     },
+    // Transform logs into a string
     serialize: function(name, logs, settings){
         return JSON.stringify(logs);
     },
+    // Set logs into an input (i.e. put them wherever you want)
     send: function(name, serialized, settings, ctx){
         document.getElementById('el').value = serialized;
     }

@@ -16,8 +16,8 @@ Sometimes we want to dynamically choose which scripts to load.
 For that purpose we can manually load MinnoJS.
 
 In order to do this, we need to load MinnoJS 
-(both the [css](https://cdn.jsdelivr.net/gh/minnojs/minno-quest@0.3/dist/pi-minno.js) and the 
-[js](https://cdn.jsdelivr.net/gh/minnojs/minno-quest@0.3/dist/main.css)), 
+(both the [js](https://cdn.jsdelivr.net/gh/minnojs/minno-quest@0.3/dist/pi-minno.js) and the 
+[css](https://cdn.jsdelivr.net/gh/minnojs/minno-quest@0.3/dist/main.css)), 
 and then activate it with the `window.minnoJS` function.
 
 ```html
