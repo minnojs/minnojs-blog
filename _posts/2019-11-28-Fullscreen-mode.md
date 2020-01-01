@@ -29,13 +29,18 @@ else if(window.ActiveXObject){
 }
 ```
 
-Note however that this API only works during user interaction, so that it cannot be used maliciously.
+Note however, that this API only works during user interaction (i.e., after the user interacts with our page), 
+to prevent maliciously switching to full-screen in ways that might confuse the user.
 Therefore we need to call it from within a user event such as a mouse click or keypress.
 
-We now, start integration with MinnoJS.
-The most likely place for us to activate full screen is at the debriefing phase.
+How do we integrate this code in a MinnoJS study?
+Typically, our study would start with a consent form, and that might be the best place for triggering the full-screen mode. 
+We could add a message with a fullscreen button and have users click it. 
+But, it might be nicer if the fullscreen mode would start as soon as we continue from the consent to the next page of our study. 
+Let's do that.
+
 We could add a [message](https://minnojs.github.io/minno-quest/0.2/manager/messages.html) with a fullscreen button and have users click it,
-but wouldn't it be nice if proceeding from the debriefing page would automatically activate full screen?
+but wouldn't it be nice if proceeding from the consent page would automatically activate full screen?
 Let's do exactly that. 
 We begin by creating a standard message task.
 We then add a [`load` hook](https://minnojs.github.io/minno-quest/0.2/manager/API.html#tasks) to run our custom Javascript
@@ -47,10 +52,9 @@ When the proceed button is clicked the listener will be triggered, and the code 
 ```js
 {
     type:'message',
-    piTemplate:true,
     template: [
-        'This is where the debriefing text goes',
-        'Be sure to note that comencing the study will move to transfer the browser to fullscreen mode'
+        'This is where the consent text goes',
+        'Be sure to note that commencing the study will switch the browser to fullscreen mode'
     ].join(''),
     load: function(){
         document.querySelector('[pi-message-done]').addEventListener('click', function(){
@@ -69,4 +73,4 @@ When the proceed button is clicked the listener will be triggered, and the code 
 
 Some older versions of Safari do not support keyboard input when in fullscreen mode.
 If you are writing a study using keyboard input, and expect users to use older devices you should explicitly
-note this chalenge within the instructions.
+note this problem within the instructions.

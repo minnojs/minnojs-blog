@@ -9,7 +9,7 @@ name: MinnoJS
 description: Programming with MinnoJS
 
 # URL of your avatar or profile pic (you could use your GitHub profile pic)
-avatar: https://implicit.harvard.edu/implicit/common/all/img/logo-inner2.png
+avatar: /images/logo.png
 
 #
 # Flags below are optional
