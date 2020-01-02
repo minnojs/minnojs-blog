@@ -1,15 +1,26 @@
 ---
 layout: page
-title: About
+title: About MinnoJS
 permalink: /about/
 ---
 
-Some information about you!
+[MinnoJS](https://minnojs.github.io/) is a free tool for creating web studies with sophisticated questionnaires
+and reaction time tasks. This blog is all about programming with Minno.
+We are a group of programmers and researchers that participated in the creation of MinnoJS.
+This is where we write about the problems that we solve and the chalenges that we face.
 
-### More Information
+So you're asking why Minno?
+First of all, Minno is fun.
+Minno scripts are easy to read and write even without previous knowledge in programming.
 
-A place to include any other types of information that you'd like to include about yourself.
+Second, it's flexible.
+It is predesigned to be rich and flexible.
+But because of its close association with Javascript 
+(one of the most popular programming languages in the world *and* the programming language of the web),
+it is very easy to do practically anything that you want.
 
-### Contact me
-
-[email@domain.com](mailto:email@domain.com)
+Finally, it is steady and well proven.
+Minno has been developed by [Project Implicit](http://projectimplicit.net/about.html) for
+running social cognitive experiments online.
+On Project Implicit's [website](http://implicit.harvard.edu/implicit), studies developed with Minno.js
+collect data from thousands of participants every day.
