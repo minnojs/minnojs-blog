@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Manually activating MinnoJS
+author: elad_zlotnick
 ---
 
 The standard way to activate MinnoJS is by having a dedicated element at page load that has the script URL built in.
