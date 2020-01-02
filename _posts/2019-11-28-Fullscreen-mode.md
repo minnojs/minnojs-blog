@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Fullscreen mode in MinnoJS
+author: elad_zlotnick
 ---
 
 Sometimes it is usefull to have your task run in fullscreen mode.

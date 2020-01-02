@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Creating a custom logger
+author: elad_zlotnick
 ---
 
 MinnoJS automatically sends data from questionnaires (miQuest) and about tasks (which task was visited). 

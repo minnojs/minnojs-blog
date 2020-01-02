@@ -1,0 +1,25 @@
+<hr>
+<div class="author">
+   # include author image if there is an author image 
+   {% if author.image %}
+      <img src="{{author.image}}" class="author-avatar">
+   {% endif %}
+   <p>
+      {{author.name}} 
+
+         # include link to author's twitter if they have provided a twitter account
+         {% if author.github %}
+         <a href="{{author.github}}" class="social-link">
+            <img height="16" width="16" src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/github.svg" />
+         </a>          
+         {% endif %}
+
+         {% if author.twitter %}
+         <a href="{{author.twitter}}" class="social-link">
+            <img height="16" width="16" src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/twitter.svg" />
+         </a>          
+         {% endif %}
+
+         - Written on {{ page.date | date: "%B %e, %Y" }}
+   </p>
+</div>
