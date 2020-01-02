@@ -1,4 +1,4 @@
-{% assign author = site.data.authors[page.author] %}
+{% assign author = site.data.authors[include.author] %}
 <div class="author">
    {% if author.image %}
       <img src="{{author.image}}" class="author-avatar">
