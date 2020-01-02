@@ -7,17 +7,17 @@
       {{author.name}} 
 
          {% if author.github %}
-         <a href="{{author.github}}" class="social-link">
+         <a href="{{author.github}}" class="author-social">
             <img height="16" width="16" src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/github.svg" />
          </a>          
          {% endif %}
 
          {% if author.twitter %}
-         <a href="{{author.twitter}}" class="social-link">
+         <a href="{{author.twitter}}" class="author-social">
             <img height="16" width="16" src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/twitter.svg" />
          </a>          
          {% endif %}
 
-         - <small>{{ page.date | date: "%B %e, %Y" }}</small>
+         &mdash; <i>Published on {{ page.date | date: "%B %e, %Y" }}</i>
    </p>
 </div>
