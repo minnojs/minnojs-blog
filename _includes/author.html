@@ -1,6 +1,5 @@
-{% assign author = site.data.authors[authorName] %}
+{% assign author = site.data._authors[page.author] %}
 <div class="author">
-
    {% if author.image %}
       <img src="{{author.image}}" class="author-avatar">
    {% endif %}
@@ -19,6 +18,6 @@
          </a>          
          {% endif %}
 
-         - Written on {{ page.date | date: "%B %e, %Y" }}
+         - <small>{{ page.date | date: "%B %e, %Y" }}</small>
    </p>
 </div>
