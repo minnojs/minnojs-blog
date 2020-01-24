@@ -20,7 +20,7 @@ We need a multiline question because we are going to use a CSV format to save th
 and single line questions do not save new lines.
 Now, make sure that you have a *Page Break* before and after the question so that it appears on a separate page (you can do this in the actions section of the settings box on the right).
 
-![Qualtrics image](./images/qualtrics.jpg)
+![Qualtrics image](../images/qualtrics.jpg)
 
 Next we will setup the Javascript.
 The general idea is that qualtrics activates MinnoJS, 
