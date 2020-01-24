@@ -20,6 +20,8 @@ We need a multiline question because we are going to use a CSV format to save th
 and single line questions do not save new lines.
 Now, make sure that you have a *Page Break* before and after the question so that it appears on a separate page (you can do this in the actions section of the settings box on the right).
 
+![Qualtrics image](./images/qualtrics.jpg)
+
 Next we will setup the Javascript.
 The general idea is that qualtrics activates MinnoJS, 
 then MinnoJS returns the results as a string to Qualtrics which logs it into the "*Text Entry*" question.
@@ -32,42 +34,42 @@ This is where we hide the original question, load MinnoJS ([and then your task](
 The details are described in the code's comments.
 
 ```js
-Qualtrics.SurveyEngine.addOnload(function(){
+Qualtrics.SurveyEngine.addOnload(function () {
     // hide question and next button
-	var container = this.getQuestionContainer();
-	container.querySelector('.Inner').style.display = 'none';
-	this.hideNextButton();
-    
+    var container = this.getQuestionContainer();
+    container.querySelector('.Inner').style.display = 'none';
+    this.hideNextButton();
+
     // load MinnoJS from the CDN (you probably don't need to change this)
     var scriptTag = document.createElement('script');
     scriptTag.src = 'https://cdn.jsdelivr.net/gh/minnojs/minno-quest@0.3/dist/pi-minno.js';
     scriptTag.onload = onLoad;
     scriptTag.onreadystatechange = onLoad;
     container.appendChild(scriptTag);
-    
+
     // create the root element for Minno
-	var canvas = document.createElement('div');
+    var canvas = document.createElement('div');
     container.appendChild(canvas);
-    
+
     // function to proceed to next question
     var proceed = this.clickNextButton.bind(this);
 
     // This function gets activated only after MinnoJS is loaded
-	function onLoad(){
+    function onLoad() {
         // Run your study (just set the correct URL)
         minnoJS(canvas, 'https://pcplab.sfo2.digitaloceanspaces.com/ezlot/settings.js');
-        
+
         // MinnoJS doesn't know about Qualtrics, we pass a function to inject the results into the question
         // For some reason `piGlobal` isn't available so we attach it to `minnoJS`
-		minnoJS.logger = function(value){
-			var el = container.querySelector('textarea');
-			el.value = value;
+        minnoJS.logger = function (value) {
+            var el = container.querySelector('textarea');
+            el.value = value;
         }
-        
+
         // At the end of the study let MinnoJS proceed to the next question
         // We need to wait a few miliseconds for Qualtrics to register the value that we entered
-		minnoJS.onEnd = function(){ setTimeout(proceed, 100); }
-	}
+        minnoJS.onEnd = function () { setTimeout(proceed, 100); }
+    }
 });
 ```
 
@@ -122,6 +124,7 @@ As we know the code that we wrote in Qualtrics will inject it into the question.
 
 ```js
 function send(name, serialized){
+    window.minnoJS.logger(serialized);
 }
 ```
 
