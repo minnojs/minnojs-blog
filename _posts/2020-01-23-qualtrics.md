@@ -20,7 +20,7 @@ We need a multiline question because we are going to use a CSV format to save th
 and single line questions do not save new lines.
 Now, make sure that you have a *Page Break* before and after the question so that it appears on a separate page (you can do this in the actions section of the settings box on the right).
 
-![Qualtrics image](../images/qualtrics.jpg)
+![Qualtrics image](../images/qualtrics.png)
 
 Next we will setup the Javascript.
 The general idea is that qualtrics activates MinnoJS, 
@@ -29,8 +29,8 @@ To the left of your question there is a cog-wheel icon.
 Click it and choose "Add Javascript...".
 A window with a Javascript editor should pop up - this is where we do the actual integration.
 The interesting part for us is the `Qualtrics.SurveyEngine.addOnload` function.
-This is where we hide the original question, load MinnoJS ([and then your task](./integration)), 
-[save the results](./integration-logging) returned from MinnoJS and finaly progress to the next question in your survey.
+This is where we hide the original question, load MinnoJS ([and then your task](../integration)), 
+[save the results](../integration-logging) returned from MinnoJS and finaly progress to the next question in your survey.
 The details are described in the code's comments.
 
 ```js
@@ -86,7 +86,7 @@ API.addSettings('onEnd', window.minnoJS.onEnd);
 ```
 
 Next we want to setup the Logger.
-The general idea is very similar to what we did [here](./integration-logging/).
+The general idea is very similar to what we did [here](../integration-logging/).
 The only differences are how we deal with serialization 
 ([CSV](https://en.wikipedia.org/wiki/Comma-separated_values) instead of [JSON](https://en.wikipedia.org/wiki/JSON)),
 and saving the data (call `minnoJS.logger` instead of directly saving into an element).
