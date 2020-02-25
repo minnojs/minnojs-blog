@@ -100,10 +100,15 @@ In this case I decided to use plain CSV.
 This transformation occurs in the `serialize` function of the logger (see below for the full integration).
 Note that I'm creating a file based on my needs (with specific headers and values),
 you should fit the data that you are saving into the CSV to your specific needs.
+In order to do that, change the first two lines of code in the function (starting with `var headers`, and `var content`).
+First set static headers that you want for you CSV, and then pick the values that you want from each log
+(the logs object is identical to the one that can be found in piGlobal.current.logs).
 
 ```js
 function serialize(name, logs) {
+    // Set the header row for your CSV
     var headers = ['group', 'latency', 'block', 'stimulus', 'correct'];
+    // gather the relevant data from the logs
     var content = logs.map(function (log) { return [log.data.alias, log.latency, log.data.block, log.data.stimIndex, log.data.score]; });
     content.unshift(headers);
     return toCsv(content);
