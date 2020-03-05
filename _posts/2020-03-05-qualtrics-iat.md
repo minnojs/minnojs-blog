@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Running Project Implicit’s IAT from Qulatrics
-author: yoav_var_anan
+author: baranan
 ---
 
 [Project Implicit](http://projectimplicit.net/) has developed [MinnoJS](https://minnojs.github.io/) to program web studies. 
