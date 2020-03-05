@@ -121,7 +121,7 @@ At the beginning of [that script](https://baranan.github.io/minno-tasks/quiat8.j
 you can see all the possible arguments (i.e., parameters for the IAT). 
 The arguments are provided in a JavaScript [JSON](https://www.w3schools.com/js/js_json.asp) object. 
 If you don’t want to change the default value of an argument, you don’t need to include that argument in your own script.
-If you change even one parameter within a child object (i.e., within a property that is an object, sucjhas the property *category2*), you must define the whole object in your own code (as we did with category1 and category2 in the example above). The only parameters that we changed in the example above are the categories (labels and stimuli) and the url for the folder that hosts the images. 
+If you change even one parameter within a child object (i.e., within a property that is an object, such as the property *category2*), you must define the whole object in your own code (as we did with category1 and category2 in the example above). The only parameters that we changed in the example above are the categories (labels and stimuli) and the url for the folder that hosts the images. 
 
 ### Use your own script file
 
