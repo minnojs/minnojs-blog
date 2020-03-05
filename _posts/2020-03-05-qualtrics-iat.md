@@ -14,6 +14,7 @@ We will use a modification of an IAT MinnoJS script that Project Implicit has de
 
 The script that we created for building IATs is an extension, implemented as a function that creates an IAT from a few arguments (i.e., parameters) that the researcher defines. You can read more about the basic idea of using extensions in Minno on [this page](https://github.com/baranan/minno-tasks/blob/master/implicitmeasures.md).
 
+### Into Qualtrics
 To run an IAT on your Qualtrics study, we followed the guide from an earlier [post](https://minnojs.github.io/minnojs-blog/qualtrics/). 
 The IAT will run from a single question in your survey, separated from any other question by a Page Break, like this:
 ![Qualtrics image](../images/quiat1.png)
@@ -62,6 +63,8 @@ Qualtrics.SurveyEngine.addOnload(function () {
 This code will run our example Qualtric IAT from this page. Start with that example. After you verify that it runs fine on your survey, replace it with your own IAT (we’ll get to that shortly). 
 
 **IMPORTANT NOTE:** to skip blocks when you’re testing the IAT, use the key combination: [Esc, Enter].
+
+### How we define the IAT
 
 If you go to [our example](https://baranan.github.io/minno-tasks/exampleQIAT.js), you will see how simple it can be to define your own IAT:
 ```js
@@ -120,29 +123,37 @@ The arguments are provided in a JavaScript [JSON](https://www.w3schools.com/js/j
 If you don’t want to change the default value of an argument, you don’t need to include that arguments in your own script.
 If you change even one parameter within a child object (i.e., within a property that is an object, sucj as the property *category2*), you must define the whole object in your own code (as we did with category1 and category2 in the example above). The only parameters that we changed in the example above are the categories (labels and stimuli) and the url for the folder that hosts the images. 
 
+### Use your own script file
+
 Next, it’s time to create your own IAT. For that, you need to create a script like the example script, and post it online. If you have your own website (e.g., a home directory hosted by your university), you can put that script on that website. It is a static file so pretty much any server will suffice. Or, you can use a free online service for that. My example is hosted on github, which is free and [easy to setup](https://help.github.com/en/github/working-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site). 
 
 First, just copy my code and put it on your server. Change the url in the JavaScript code you entered to Qualtrics earlier, and see that the IAT runs fine. 
 
-Next, it’s time to change your own code. If you’re using photos, put them in your own directory and change your IAT script to search for images there: base_url: {image:’YOUR URL GOES HERE’}.
+### Define your IAT
+
+Now, change your code to build the IAT you need. If you’re using photos, put them in your own directory and change your IAT script to search for images there: base_url: {image:’YOUR URL GOES HERE’}.
 If you’re using words rather than photos, you need to update the [media](https://minnojs.github.io/minno-time/0.5/time/API.html#media) object of the categories. For instance: {word: 'Tyrone'}.
 
 If you want to update the attributes, see how the attributes are defined in the [extension script](https://baranan.github.io/minno-tasks/quiat8.js) and override them by defining your own attributes in your IAT script.
 
 Although our IAT script supports touch devices, the IAT does not detect automatically whether the participant is using a touch device (e.g., mobile). Therefore, if you want your participants to run the IAT on a mobile device or a tablet, you will need to create an IAT version specifically for those participants (in your script, set isTouch:true in the IAT parameters). 
 
-The original post about running MinnoJS scripts from Qualtrics explains the how to process the data saved by Qualtrics. [Here](https://github.com/baranan/minno-tasks/blob/master/docs/minno.qualtrics.iat.process.rmd)([download from [here](https://baranan.github.io/minno-tasks/minno.qualtrics.iat.process.rmd)] is an R (well, rmd) script that you can use to analyze the IAT data. If you don’t feel comfortable using R, here is how to create a csv file with the IAT data, using Excel. 
-Download the data from Qualtrics as csv.
-Open the csv file with Excel
-Copy only the cells with IAT data. For i nstance, because the IAT was in Q3 in my Qualtrics questionnaire, the relevant column is under Q3. I select only the cell with that data and copy those cells.
-Open a notepad (or notepad++ or any other simple editor) and paste the data to that file.
-Replace [usually, ctrl-H) the text “block,trial with the text block,trial (i.e., remove the “ before block)
-Replace “”” (three double quotes) with “” (two double quotes)
-Replace “” (two double quotes) with “ (one double quotes)
-Save that file as a csv file
-You can open that csv file to make sure that it is fine
-The steps in an animated gif:
+### Process the IAT data
 
+The original post about running MinnoJS scripts from Qualtrics explains the how to process the data saved by Qualtrics. [Here](https://github.com/baranan/minno-tasks/blob/master/docs/minno.qualtrics.iat.process.rmd)([download from [here](https://baranan.github.io/minno-tasks/minno.qualtrics.iat.process.rmd)] is an R (well, rmd) script that you can use to analyze the IAT data. If you don’t feel comfortable using R, here is how to create a csv file with the IAT data, using Excel. 
+1. Download the data from Qualtrics as csv.
+2. Open the csv file with Excel
+3. Copy only the cells with IAT data. For instance, because the IAT was in Q3 in my Qualtrics questionnaire, the relevant column is under Q3. I select only the cell with that data and copy those cells.
+4. Open a notepad (or notepad++ or any other simple editor) and paste the data to that file.
+5. Replace (usually, ctrl-H) the text “block,trial with the text block,trial (i.e., remove the “ before block)
+6. Replace “”” (three double quotes) with “” (two double quotes)
+7. Replace “” (two double quotes) with “ (one double quotes)
+8. Save that file as a csv file
+9. You can open that csv file to make sure that it is fine
+The steps in an animated gif:
+![Data image](../images/processiat.gif)
+
+### Any questions?
 
 If you have any questions, you post questions in our MinnoJS Google Group, [here](https://groups.google.com/forum/?utm_medium=email&utm_source=footer#!forum/minnojs).. 
 
