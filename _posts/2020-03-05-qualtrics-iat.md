@@ -161,10 +161,12 @@ If you have any questions, you post questions in our MinnoJS Google Group, [here
 ### Cite Us
 
 You used MinnoJS platform, which is cited like this:
+
 `Zlotnick, E., Dzikiewicz, A. J., & Bar-Anan, Y. (2015). Minno.js (Version 0.3) [Computer software].`
 
 To cite our Qualtrics-IAT script, cite this blog post:
-Bar-Anan, Y. (2020, March 3). Running Project Implicit’s IAT from Qulatrics \[Blog post\]. Retrieved from https://minnojs.github.io/minnojs-blog/qualtrics-iat/
+
+`Bar-Anan, Y. (2020, March 3). Running Project Implicit’s IAT from Qulatrics \[Blog post\]. Retrieved from https://minnojs.github.io/minnojs-blog/qualtrics-iat/`
 
 
 
