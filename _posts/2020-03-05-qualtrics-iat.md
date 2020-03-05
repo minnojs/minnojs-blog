@@ -15,7 +15,7 @@ We will use a [modification](https://baranan.github.io/minno-tasks/quiat8.js) of
 The script that we created for building IATs is an extension, implemented as a function that creates an IAT from a few arguments (i.e., parameters) that the researcher defines. You can read more about the basic idea of using extensions in Minno on [this page](https://github.com/baranan/minno-tasks/blob/master/implicitmeasures.md).
 
 ### Into Qualtrics
-To run an IAT on your Qualtrics study, I followed the guide from an earlier [post](https://minnojs.github.io/minnojs-blog/qualtrics/). 
+To run an IAT on Qualtrics study, I followed the guide from an earlier [post](https://minnojs.github.io/minnojs-blog/qualtrics/). 
 The IAT will run from a single question in your survey, separated from any other question by a Page Break, like this:
 ![Qualtrics image](../images/quiat1.png)
 
@@ -62,7 +62,7 @@ Qualtrics.SurveyEngine.addOnload(function () {
 
 This code will run our example Qualtric IAT from this page. Start with that example. After you verify that it runs fine on your Qualtrics survey, replace it with your own IAT (we’ll get to that shortly). 
 
-**IMPORTANT NOTE:** to skip blocks when you’re testing the IAT, use the key combination: <Esc>, <Enter>.
+**IMPORTANT NOTE:** to skip blocks when you’re testing the IAT, use the key combination: Esc, Enter.
 
 ### How we define the IAT
 
