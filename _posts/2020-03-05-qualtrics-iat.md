@@ -166,7 +166,7 @@ You used MinnoJS platform, which is cited like this:
 
 To cite our Qualtrics-IAT script, cite this blog post:
 
-`Bar-Anan, Y. (2020, March 3). Running Project Implicit’s IAT from Qulatrics \[Blog post\]. Retrieved from https://minnojs.github.io/minnojs-blog/qualtrics-iat/`
+`Bar-Anan, Y. (2020, March 3). Running Project Implicit’s IAT from Qulatrics [Blog post]. Retrieved from https://minnojs.github.io/minnojs-blog/qualtrics-iat/`
 
 
 
