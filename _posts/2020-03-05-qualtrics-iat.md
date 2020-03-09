@@ -158,11 +158,11 @@ The steps in an animated gif:
 
 We posted online some of Project Implicit's IATs. You can duplicate them to your own server, or just call them directly from Qualtrics:
 
-|Task|URL|
-|_ _ _ | _ _ _ |
-|[2020 Race IAT](https://github.com/baranan/minno-tasks/blob/master/docs/demoRace0005.js)|`"https://github.com/baranan/minno-tasks/blob/master/docs/demoRace0005.js"`|
-|[2020 Gender-Science IAT](https://github.com/baranan/minno-tasks/blob/master/docs/demogenderscience0002.js)|`"https://github.com/baranan/minno-tasks/blob/master/docs/demogenderscience0002.js"`|
-|[2020 Sexuality IAT](https://github.com/baranan/minno-tasks/blob/master/docs/demosexuality0002.js)|`"https://github.com/baranan/minno-tasks/blob/master/docs/demosexuality0002.js"`
+[2020 Race IAT](https://github.com/baranan/minno-tasks/blob/master/docs/demoRace0005.js), URL:`"https://github.com/baranan/minno-tasks/blob/master/docs/demoRace0005.js"`
+
+[2020 Gender-Science IAT](https://github.com/baranan/minno-tasks/blob/master/docs/demogenderscience0002.js), URL:`"https://github.com/baranan/minno-tasks/blob/master/docs/demogenderscience0002.js"` 
+
+[2020 Sexuality IAT](https://github.com/baranan/minno-tasks/blob/master/docs/demosexuality0002.js), URL: `"https://github.com/baranan/minno-tasks/blob/master/docs/demosexuality0002.js"`
 
 
 In the evaluative IATs, for each participant, we randomly choose eight positive and eight negative attribute words from a sets of 48 positive and 48 negativewords. In our internal tests, we did not find evidence that any of these words is more effective than the others. 
