@@ -158,11 +158,13 @@ The steps in an animated gif:
 
 We posted online some of Project Implicit's IATs:
 
-[2020 Race IAT](https://github.com/baranan/minno-tasks/blob/master/docs/demoRace0005.js), URL:`"https://github.com/baranan/minno-tasks/blob/master/docs/demoRace0005.js"`
+[2020 Race IAT](https://baranan.github.io/minno-tasks/demoRace0005.js), URL:`"https://baranan.github.io/minno-tasks/demoRace0005.js"`
 
-[2020 Gender-Science IAT](https://github.com/baranan/minno-tasks/blob/master/docs/demogenderscience0002.js), URL:`"https://github.com/baranan/minno-tasks/blob/master/docs/demogenderscience0002.js"` 
+[2020 Gender-Science IAT](https://baranan.github.io/minno-tasks/demogenderscience0002.js), URL:`"https://baranan.github.io/minno-tasks/demogenderscience0002.js"` 
 
-[2020 Sexuality IAT](https://github.com/baranan/minno-tasks/blob/master/docs/demosexuality0002.js), URL: `"https://github.com/baranan/minno-tasks/blob/master/docs/demosexuality0002.js"`
+[2020 Sexuality IAT](https://baranan.github.io/minno-tasks/demosexuality0002.js), URL: `"https://baranan.github.io/minno-tasks/demosexuality0002.js"`
+
+[Israel: AShkenazim/Mizrakhim Hebrew](https://baranan.github.io/minno-tasks/iatashmiz.js), URL: `"https://baranan.github.io/minno-tasks/iatashmiz.js"`
 
 You can duplicate them to your own server, or just call them directly from Qualtrics. That is, in the code you enter in Qualtrics, when you define what task to launch using MinnoJS, use the URL to the demo task that you want to use. For instance:
 
