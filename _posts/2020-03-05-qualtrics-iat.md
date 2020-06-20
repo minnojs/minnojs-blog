@@ -156,22 +156,15 @@ The steps in an animated gif:
 
 ### Using Project Implicit's IATs
 
-We posted online some of Project Implicit's IATs:
+We posted [online](https://cdn.jsdelivr.net/gh/baranan/minno-tasks@0.*/IAT/qualtrics/), most of Project Implicit's IATs.
 
-[2020 Race IAT](https://baranan.github.io/minno-tasks/demoRace0005.js), URL:`"https://baranan.github.io/minno-tasks/demoRace0005.js"`
+You can duplicate them to your own server, or just call them directly from Qualtrics. That is, in the code you enter in Qualtrics, when you define what task to launch using MinnoJS, use the URL to the demo task that you want to use. For instance, for our race IAT:
 
-[2020 Gender-Science IAT](https://baranan.github.io/minno-tasks/demogenderscience0002.js), URL:`"https://baranan.github.io/minno-tasks/demogenderscience0002.js"` 
+`minnoJS(canvas, 'https://cdn.jsdelivr.net/gh/baranan/minno-tasks@0.2.8/IAT/qualtrics/demoRace0005.js');`
 
-[2020 Sexuality IAT](https://baranan.github.io/minno-tasks/demosexuality0002.js), URL: `"https://baranan.github.io/minno-tasks/demosexuality0002.js"`
-
-[Israel: AShkenazim/Mizrakhim Hebrew](https://baranan.github.io/minno-tasks/iatashmiz.js), URL: `"https://baranan.github.io/minno-tasks/iatashmiz.js"`
-
-You can duplicate them to your own server, or just call them directly from Qualtrics. That is, in the code you enter in Qualtrics, when you define what task to launch using MinnoJS, use the URL to the demo task that you want to use. For instance:
-
-`minnoJS(canvas, 'https://github.com/baranan/minno-tasks/blob/master/docs/demoRace0005.js');`
-
-In the evaluative IATs, for each participant, we randomly choose eight positive and eight negative attribute words from a sets of 48 positive and 48 negativewords. In our internal tests, we did not find evidence that any of these words is more effective than the others. 
-In the Sexuality IAT, for each participant, we randomly choose whether the Gay category would refer to women or men, or both. When you process the data, to know which IAT each  participant completed, use the stimuli in the IAT data.
+A couple of notes about these IATs:
+* In the evaluative IATs, for each participant, we randomly choose eight positive and eight negative attribute words from a sets of 48 positive and 48 negativewords. In our internal tests, we did not find evidence that any of these words is more effective than the others. 
+* In the Sexuality IAT, for each participant, we randomly choose whether the Gay category would refer to women or men, or both. When you process the data, to know which IAT each  participant completed, use the stimuli in the IAT data.
 
 
 ### Any questions?
