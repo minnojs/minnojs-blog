@@ -37,7 +37,7 @@ but your study has not been uploaded yet, so all you will see is a generic landi
 
 {% include image.html url="../images/csv/ready.subdomain.png" description="Image 3: the ready subdomain (you will have your own site name here)" %}
 
-### Uploading the study files
+### Uploading the system files
 
 Now that we’ve created a subdomain for our study, we can start setting up the study.
 Studies in the simple server are created simply by uploading files. 
@@ -59,6 +59,8 @@ in order to start uploading your files.
 You can drag your files into the box in order to upload them (image 5 b).
 We first upload [index.html](https://github.com/minnojs/simple-minno-server/blob/master/index.html), and [csv.php](https://github.com/minnojs/simple-minno-server/blob/master/csv.php). 
 You can find these files in the root directory of [simple-minno-server](https://github.com/minnojs/simple-minno-server).
+
+### Uploading the study files
 
 Next, we create a folder to hold the files of our study.
 Click “Create” (image 5 c) and create a directory named “study”. 
