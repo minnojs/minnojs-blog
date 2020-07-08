@@ -16,6 +16,7 @@ than the theoretical knowledge gained by just reading along.
 Before beginining the installation, you should [set up an account](https://www.awardspace.com/free-web-hosting-registration/) on AwardSpace.
 You should also download the files from the **simple-minno-server**, which can be found [here](https://github.com/minnojs/simple-minno-server/archive/master.zip).
 
+### Setting up a subdomain
 After setting up your account, you can start creating your study.
 The first page that you see when you log into your account is the dashboard.
 You can always get back here using the navigation bar at the top of the screen (Image 1 a).
@@ -35,6 +36,8 @@ If you like, you can visit it already by clicking “Open Website” (Image 3 a)
 but your study has not been uploaded yet, so all you will see is a generic landing page.
 
 {% include image.html url="../images/csv/ready.subdomain.png" description="Image 3: the ready subdomain (you will have your own site name here)" %}
+
+### Uploading the study files
 
 Now that we’ve created a subdomain for our study, we can start setting up the study.
 Studies in the simple server are created simply by uploading files. 
@@ -72,6 +75,8 @@ You can now see my study running at [minnojs-simple.atwebpages.com](http://minno
 In order to run your study, you can go back to the dashboard, choose Domain Manager and then click “Open website”.
 Go ahead, run your study twice or thrice.
 
+### Getting the results
+
 You will see that a new folder has appeared in your site folder called “results” (near where you put `index.html` and `csv.php`).
 This folder is created automatically if it does not exist whenever MinnoJS attempts to save data.
 Double click this folder to see two types of files. 
@@ -85,8 +90,11 @@ Experience shows that it is easiest to create new studies by transforming existi
 You can use the study we created in the current tutorial, or you can use the more involved study in the [study.race](https://github.com/minnojs/simple-minno-server/tree/master/study.race) folder. 
 Try copying its content into the “study” folder and see what happens.
 
+### Editing you study
+
 You can edit your files using the “edit” button in the “File Manager”,
-but if you intend to do a lot of editing you might want to start using a program that allows easier
+or by editing it on you computer and re-uploading it.
+But if you intend to do a lot of editing you might want to start using a program that allows easier
 communication with the server (i.e. an FTP client. I highly recommend [FileZilla]( https://filezilla-project.org/
 )).
 
