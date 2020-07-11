@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Running Project Implicit’s IAT from Qulatrics
+title: Running Project Implicit’s IAT from Qualtrics
 author: yoav_bar_anan
 ---
 
 [Project Implicit](http://projectimplicit.net/) has developed [MinnoJS](https://minnojs.github.io/) to program web studies. 
 The main instrument that we use in Project Implicit is the Implicit Association Test (IAT). 
 The IAT is a commonly used indirect measure of social cognition (read more about such measures [here](https://www.tau.ac.il/~baranan/imp.html)). 
-If you reached this blog post, you probably know what the IAT is and you want to use it in your own study. In this blog post, I will explain how you can use our script in a Qulatrics study. 
+If you reached this blog post, you probably know what the IAT is and you want to use it in your own study. In this blog post, I will explain how you can use our script in a Qualtrics study. 
 
 ### Project Implicit's MinnoJS IAT extension 
 We will use a [modification](https://baranan.github.io/minno-tasks/quiat8.js) of an IAT MinnoJS [script](https://cdn.jsdelivr.net/gh/baranan/minno-tasks@0.*/IAT/iat8.js) that Project Implicit has developed. In Project Implicit, we use that script to run the study from Open Minno Suite, our platform for running web studies. Before you decide to use that script in Qualtrics, please consider using our free platform as an alternative to Qualtrics (you can read more about it [here](https://minnojs.github.io/docsite/minnosuitedashboard/)). 
