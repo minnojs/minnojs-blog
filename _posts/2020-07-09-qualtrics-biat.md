@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Running BIAT extention from Qulatrics
+title: Running BIAT extention from Qualtrics
 author: Gal Maimon
 ---
 
