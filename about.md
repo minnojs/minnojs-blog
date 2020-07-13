@@ -24,3 +24,5 @@ Minno has been developed by [Project Implicit](http://projectimplicit.net/about.
 running social cognitive experiments online.
 On Project Implicit's [website](http://implicit.harvard.edu/implicit), studies developed with Minno.js
 collect data from thousands of participants every day.
+
+For questions about Minno, try our [Google Group](https://groups.google.com/forum/?utm_medium=email&utm_source=footer#!forum/minnojs).
