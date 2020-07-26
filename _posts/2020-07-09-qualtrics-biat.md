@@ -194,7 +194,7 @@ If you want to update the attributes, see how the attributes are defined in the 
 
 ### Processing the BIAT data
 
-The original [post](https://minnojs.github.io/minnojs-blog/qualtrics/) about running MinnoJS scripts from Qualtrics explains the how to process the data saved by Qualtrics. 
+The original [post](https://minnojs.github.io/minnojs-blog/qualtrics/) about running MinnoJS scripts from Qualtrics explains the how to process the data saved by Qualtrics. In short, the IAT data are saved as the content (value) of the IAT question in your questionnaire. That content is a csv file. You can learn more about how to process the data from Yoav Bar-Anan's [R script](https://github.com/baranan/minno-tasks/blob/master/BIAT/qualtrics/minno.qualtrics.test.biat.process.rmd) for the data we recorded when testing my Qualtrics-BIAT examples. That script runs on the csv data file. 
 
 If you don’t feel comfortable using R, here is how to create a csv file with the IAT data, using Excel. 
 1. Download the data from Qualtrics as csv.
