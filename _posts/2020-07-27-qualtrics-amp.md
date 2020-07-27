@@ -17,7 +17,7 @@ The script that we created for building an AMP is an extension, implemented as a
 ### Into Qualtrics
 The AMP will run from a single question in your survey, separated from any other question by a Page Break, like this:
 
-![Qualtrics image](https://github.com/minnojs/minnojs-blog/blob/master/images/quiat1.png)
+![Qualtrics image](../images/quiat1.png)
 
 After creating that question, click the JS icon in the AMP question, and add the following code: 
 
