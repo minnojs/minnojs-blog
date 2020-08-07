@@ -151,7 +151,7 @@ In our qualtrics-AMP [folder](https://github.com/baranan/minno-tasks/tree/master
 
 ### Processing the AMP data
 
-The original [post](https://minnojs.github.io/minnojs-blog/qualtrics/) about running MinnoJS scripts from Qualtrics explains how to process the data saved by Qualtrics. To test the data of my example, Yoav created [this R script](https://github.com/baranan/minno-tasks/blob/master/amp/qualtrics/minno.qualtrics.test.amp.process.rmd) and it might help you process and score your own data as well.
+The original [post](https://minnojs.github.io/minnojs-blog/qualtrics/) about running MinnoJS scripts from Qualtrics explains how to process the data saved by Qualtrics. To test the data of my example, Yoav created [this R script](https://github.com/baranan/minno-tasks/blob/master/IAT/qualtrics/minno.qualtrics.iat.process.rmd) and it might help you process and score your own data as well.
 
 If you don’t feel comfortable using R, here is how to create a csv file with the IAT data, using Excel. 
 1. Download the data from Qualtrics as csv.
