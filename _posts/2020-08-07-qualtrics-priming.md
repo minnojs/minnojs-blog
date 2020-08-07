@@ -176,7 +176,7 @@ You used MinnoJS platform, which is cited like this:
 
 To cite our Qualtrics Evaluative Priming Task script, cite this blog post:
 
-`Maimon, G. (2020, July 27). Running Project Implicit’s Evaluative Priming Task from Qulatrics [Blog post]. Retrieved from https://minnojs.github.io/minnojs-blog/qualtrics-priming/`
+`Maimon, G. (2020, August 07). Running Project Implicit’s Evaluative Priming Task from Qulatrics [Blog post]. Retrieved from https://minnojs.github.io/minnojs-blog/qualtrics-priming/`
 
 
 
