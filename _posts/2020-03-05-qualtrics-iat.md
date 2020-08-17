@@ -68,7 +68,7 @@ This code will run our example Qualtric IAT from this page. Start with that exam
 
 If you go to [our example](https://baranan.github.io/minno-tasks/exampleQIAT.js), you will see how simple it can be to define your own IAT:
 ```js
-define(['pipAPI', 'https://baranan.github.io/minno-tasks/quiat8.js'], function(APIConstructor, iatExtension){
+define(['pipAPI', 'https://cdn.jsdelivr.net/gh/baranan/minno-tasks@0.*/IAT/qualtrics/quiat8.js'], function(APIConstructor, iatExtension){
     var API = new APIConstructor();
 
 	return iatExtension({
@@ -114,10 +114,10 @@ define(['pipAPI', 'https://baranan.github.io/minno-tasks/quiat8.js'], function(A
 	});
 });
 ```
-In the first line, we tell Minno where the [full IAT script](https://baranan.github.io/minno-tasks/quiat8.js) is:
-`define(['pipAPI', 'https://baranan.github.io/minno-tasks/quiat8.js'], function(APIConstructor, iatExtension){`
+In the first line, we tell Minno where the [full IAT script](https://cdn.jsdelivr.net/gh/baranan/minno-tasks@0.*/IAT/qualtrics/quiat8.js) is:
+`define(['pipAPI', 'https://cdn.jsdelivr.net/gh/baranan/minno-tasks@0.*/IAT/qualtrics/quiat8.js'], function(APIConstructor, iatExtension){`
 
-At the beginning of [that script](https://baranan.github.io/minno-tasks/quiat8.js), 
+At the beginning of [that script](https://cdn.jsdelivr.net/gh/baranan/minno-tasks@0.*/IAT/qualtrics/quiat8.js), 
 you can see all the possible arguments (i.e., parameters for the IAT). 
 The arguments are provided in a JavaScript [JSON](https://www.w3schools.com/js/js_json.asp) object. 
 If you don’t want to change the default value of an argument, you don’t need to include that argument in your own script.
