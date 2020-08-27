@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Running AMP extention from Qulatrics
+title: Running the AMP on Qulatrics
 author: elinor_bengayev
 ---
 
