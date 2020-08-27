@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Running BIAT extention from Qualtrics
+title: Running a Brief-IAT on Qualtrics
 author: gal_maimon
 ---
 
