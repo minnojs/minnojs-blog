@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Running ST-IAT extention from Qualtrics
+title: Running the ST-IAT on Qualtrics
 author: elinor_bengayev
 ---
 
