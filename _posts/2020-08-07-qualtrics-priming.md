@@ -10,7 +10,7 @@ In previous posts, Elad explained [how to run a Minno script from Qualtrics](htt
 
 
 ### Project Implicit's MinnoJS Evaluative Priming Task extension 
-We will use a [modification](https://cdn.jsdelivr.net/gh/baranan/minno-tasks@0.*/ep/quep5.js) of a MinnoJS Evaluative Priming Task [script](https://cdn.jsdelivr.net/gh/baranan/minno-tasks@0.*/ep/ep5.js) that Project Implicit has developed. In Project Implicit, we use that script to run the study from Open Minno Suite, our platform for running web studies. Before you decide to use that script in Qualtrics, please consider using our free platform as an alternative to Qualtrics (you can read more about it [here](https://minnojs.github.io/docsite/minnosuitedashboard/)). 
+We will use a [modification](https://cdn.jsdelivr.net/gh/baranan/minno-tasks@0.*/ep/qualtrics/quep5.js) of a MinnoJS Evaluative Priming Task [script](https://cdn.jsdelivr.net/gh/baranan/minno-tasks@0.*/ep/ep5.js) that Project Implicit has developed. In Project Implicit, we use that script to run the study from Open Minno Suite, our platform for running web studies. Before you decide to use that script in Qualtrics, please consider using our free platform as an alternative to Qualtrics (you can read more about it [here](https://minnojs.github.io/docsite/minnosuitedashboard/)). 
 
 The script that we created for building an Evaluative Priming Task is an extension, implemented as a function that creates an Evaluative Priming Task from a few arguments (i.e., parameters) that the researcher defines. You can read more about the basic idea of using extensions in Minno on [this page](https://github.com/baranan/minno-tasks/blob/master/implicitmeasures.md).
 
@@ -70,7 +70,7 @@ This code will run our example Qualtrics Evaluative Priming Task from [this page
 If you go to [our example](https://cdn.jsdelivr.net/gh/baranan/minno-tasks@0.3.9/ep/qualtrics/examplepriming.js), you will see how simple it can be to define your own Evaluative Priming Task:
 
 ```js
-define(['pipAPI', 'https://cdn.jsdelivr.net/gh/baranan/minno-tasks@0.*/ep/quep5.js'], function(APIConstructor, epExtension){
+define(['pipAPI', 'https://cdn.jsdelivr.net/gh/baranan/minno-tasks@0.*/ep/qualtrics/quep5.js'], function(APIConstructor, epExtension){
 	var API = new APIConstructor();
 	var global = API.getGlobal();
 	return epExtension(
@@ -137,13 +137,13 @@ First, just copy my code and put it on your server. Change the url in the JavaSc
 
 ### Define your Evaluative Priming Task
 
-In the first line, we tell Minno where the [full Evaluative Priming Task script](https://cdn.jsdelivr.net/gh/baranan/minno-tasks@0.*/ep/quep5.js) is:
-`define(['pipAPI', 'https://cdn.jsdelivr.net/gh/baranan/minno-tasks@0.*/ep/quep5.js'], function(APIConstructor, epExtension){`
+In the first line, we tell Minno where the [full Evaluative Priming Task script](https://cdn.jsdelivr.net/gh/baranan/minno-tasks@0.*/ep/qualtrics/quep5.js) is:
+`define(['pipAPI', 'https://cdn.jsdelivr.net/gh/baranan/minno-tasks@0.*/ep/qualtrics/quep5.js'], function(APIConstructor, epExtension){`
 
 Now, change your code to build the Evaluative Priming Task you need. If you’re using photos, put them in your own directory and change your Evaluative Priming Task script to search for images there: base_url: {image:’YOUR URL GOES HERE’}.
 If you’re using words rather than photos, you need to update the [media](https://minnojs.github.io/minno-time/0.5/time/API.html#media) object of the categories. For instance: {word: 'Tyrone'}.
 
-If you want to change anything in the task, search whether it is a parameter to the task as defined at the top of the [extension script](https://cdn.jsdelivr.net/gh/baranan/minno-tasks@0.*/ep/quep5.js) and override the parameter by setting it in your Evaluative Priming Task script (as we did for a few of the parametersin the example above). 
+If you want to change anything in the task, search whether it is a parameter to the task as defined at the top of the [extension script](https://cdn.jsdelivr.net/gh/baranan/minno-tasks@0.*/ep/qualtrics/quep5.js) and override the parameter by setting it in your Evaluative Priming Task script (as we did for a few of the parametersin the example above). 
 
 ### Processing the Evaluative Priming Task data
 
