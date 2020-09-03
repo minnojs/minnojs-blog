@@ -68,7 +68,7 @@ This code will run our example Qualtric IAT from this page. Start with that exam
 
 If you go to [our example](https://baranan.github.io/minno-tasks/exampleQIAT.js), you will see how simple it can be to define your own IAT:
 ```js
-define(['pipAPI', 'https://cdn.jsdelivr.net/gh/baranan/minno-tasks@0.*/IAT/qualtrics/quiat8.js'], function(APIConstructor, iatExtension){
+define(['pipAPI', 'https://cdn.jsdelivr.net/gh/baranan/minno-tasks@0.*/IAT/qualtrics/quiat9.js'], function(APIConstructor, iatExtension){
     var API = new APIConstructor();
 
 	return iatExtension({
@@ -114,10 +114,10 @@ define(['pipAPI', 'https://cdn.jsdelivr.net/gh/baranan/minno-tasks@0.*/IAT/qualt
 	});
 });
 ```
-In the first line, we tell Minno where the [full IAT script](https://cdn.jsdelivr.net/gh/baranan/minno-tasks@0.*/IAT/qualtrics/quiat8.js) is:
-`define(['pipAPI', 'https://cdn.jsdelivr.net/gh/baranan/minno-tasks@0.*/IAT/qualtrics/quiat8.js'], function(APIConstructor, iatExtension){`
+In the first line, we tell Minno where the [full IAT script](https://cdn.jsdelivr.net/gh/baranan/minno-tasks@0.*/IAT/qualtrics/quiat9.js) is:
+`define(['pipAPI', 'https://cdn.jsdelivr.net/gh/baranan/minno-tasks@0.*/IAT/qualtrics/quiat9.js'], function(APIConstructor, iatExtension){`
 
-At the beginning of [that script](https://cdn.jsdelivr.net/gh/baranan/minno-tasks@0.*/IAT/qualtrics/quiat8.js), 
+At the beginning of [that script](https://cdn.jsdelivr.net/gh/baranan/minno-tasks@0.*/IAT/qualtrics/quiat9.js), 
 you can see all the possible arguments (i.e., parameters for the IAT). 
 The arguments are provided in a JavaScript [JSON](https://www.w3schools.com/js/js_json.asp) object. 
 If you don’t want to change the default value of an argument, you don’t need to include that argument in your own script.
@@ -134,7 +134,7 @@ First, just copy my code and put it on your server. Change the url in the JavaSc
 Now, change your code to build the IAT you need. If you’re using photos, put them in your own directory and change your IAT script to search for images there: base_url: {image:’YOUR URL GOES HERE’}.
 If you’re using words rather than photos, you need to update the [media](https://minnojs.github.io/minno-time/0.5/time/API.html#media) object of the categories. For instance: {word: 'Tyrone'}.
 
-If you want to update the attributes, see how the attributes are defined in the [extension script](https://baranan.github.io/minno-tasks/quiat8.js) and override them by defining your own attributes in your IAT script.
+If you want to update the attributes, see how the attributes are defined in the [extension script](https://baranan.github.io/minno-tasks/quiat9.js) and override them by defining your own attributes in your IAT script.
 
 Although our IAT script supports touch devices, the IAT does not detect automatically whether the participant is using a touch device (e.g., mobile). Therefore, if you want your participants to run the IAT on a mobile device or a tablet, you will need to create an IAT version specifically for those participants (in your script, set isTouch:true in the IAT parameters). 
 
@@ -166,6 +166,28 @@ A couple of notes about these IATs:
 * In the evaluative IATs, for each participant, we randomly choose eight positive and eight negative attribute words from a sets of 48 positive and 48 negativewords. In our internal tests, we did not find evidence that any of these words is more effective than the others. 
 * In the Sexuality IAT, for each participant, we randomly choose whether the Gay category would refer to women or men, or both. When you process the data, to know which IAT each  participant completed, use the stimuli in the IAT data.
 
+### Running the IAT in full screen. 
+
+To run the IAT in full-screen, add to the IAT's parameter the parameter `fullscreen:false`
+
+### Presenting a feedback to the participant. 
+
+In Project Implicit, for eductional purpopses, at the end of many of our studies, participants see the common interpertation of their IAT result (e.g., 'your result suggests a strong automatic preference for Christians over Jews').  In experiments in other settings (e.g., in the lab), I usually don't do that. When we present feedback in Project Implicit's website, we provide much context to the participant, to make sure they don't think that the feedback is more than an educational tool. The IAT (like all the other "implicit measures") is not accurate enough to provide a reliable estimate of attitudes for each participant. Therefore, I strongly recommend not to present feedback to your participants. 
+
+Further, in Qualtrics, we cannot save the feedback in a way that would allow you to present the common interpertation of the result at the end of the study, as a part of a long and detailed debriefing.  Despite my strong recommendation not to show your participants an interpertation of their IAT result, many researchers have asked us to allow presenting the feedback to their participants. Therefore, we added that feature to our Qualtrics version of the IAT. 
+
+Here are the relevant parameters you should add to your IAT parameters, in order to enable presenting feedback in your Qualtrics IAT. The comments explain the parameters.
+```js
+showDebriefing:false, //Show feedback in the last trial? Relevant only in a Qualtrics IAT because in Qualtrics we cannot access the saved feedback and IAT score later in the survey.
+//Texts for the trials that show the debriefing.
+preDebriefingText : 'Press space to see your result', //Text in the trial that comes before showing the debriefing.
+preDebriefingTouchText : 'Touch the bottom green area to see your result', //Touch version for the text in the trial that comes before showing the debriefing.
+debriefingTextTop : 'Your result:', //Will be shown above the feedback text.
+//ATTENTION: We do not recommend showing participants their results. The IAT is a typical psychological measure so it is not very accurate. 
+//In Project Implicit's website, you can see that we added much text to explain that there is still much unknown about the meaning of these results.
+//We strongly recommend that you provide all these details in the debriefing of the experiment.
+debriefingTextBottom : 'This result is not a definitive assessment of your attitudes. It is provided for educational purposes only.', //Will be shown below the feedback text. 
+```
 
 ### Any questions?
 
