@@ -166,11 +166,11 @@ A couple of notes about these IATs:
 * In the evaluative IATs, for each participant, we randomly choose eight positive and eight negative attribute words from a sets of 48 positive and 48 negativewords. In our internal tests, we did not find evidence that any of these words is more effective than the others. 
 * In the Sexuality IAT, for each participant, we randomly choose whether the Gay category would refer to women or men, or both. When you process the data, to know which IAT each  participant completed, use the stimuli in the IAT data.
 
-### Running the IAT in full screen. 
+### Running the IAT in full screen 
 
 To run the IAT in full-screen, add to the IAT's parameter the parameter `fullscreen:false`
 
-### Presenting a feedback to the participant. 
+### Presenting a feedback to the participant 
 
 In Project Implicit, for eductional purpopses, at the end of many of our studies, participants see the common interpertation of their IAT result (e.g., 'your result suggests a strong automatic preference for Christians over Jews').  In experiments in other settings (e.g., in the lab), I usually don't do that. When we present feedback in Project Implicit's website, we provide much context to the participant, to make sure they don't think that the feedback is more than an educational tool. The IAT (like all the other "implicit measures") is not accurate enough to provide a reliable estimate of attitudes for each participant. Therefore, I strongly recommend not to present feedback to your participants. 
 
