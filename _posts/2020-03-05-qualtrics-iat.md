@@ -168,7 +168,7 @@ A couple of notes about these IATs:
 
 ### Running the IAT in full screen 
 
-To run the IAT in full-screen, add to the IAT's parameter the parameter `fullscreen:false`
+To run the IAT in full-screen, add to the IAT's parameter the parameter `fullscreen:true`
 
 ### Presenting a feedback to the participant 
 
