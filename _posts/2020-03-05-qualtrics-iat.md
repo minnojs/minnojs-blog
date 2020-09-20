@@ -160,7 +160,7 @@ We posted [online](https://cdn.jsdelivr.net/gh/baranan/minno-tasks@0.*/IAT/qualt
 
 You can duplicate them to your own server, or just call them directly from Qualtrics. That is, in the code you enter in Qualtrics, when you define what task to launch using MinnoJS, use the URL to the demo task that you want to use. For instance, for our race IAT:
 
-`minnoJS(canvas, 'https://cdn.jsdelivr.net/gh/baranan/minno-tasks@0.2.8/IAT/qualtrics/demoRace0005.js');`
+`minnoJS(canvas, 'https://cdn.jsdelivr.net/gh/baranan/minno-tasks@0.*/IAT/qualtrics/demoRace0005.js');`
 
 A couple of notes about these IATs:
 * In the evaluative IATs, for each participant, we randomly choose eight positive and eight negative attribute words from a sets of 48 positive and 48 negativewords. In our internal tests, we did not find evidence that any of these words is more effective than the others. 
