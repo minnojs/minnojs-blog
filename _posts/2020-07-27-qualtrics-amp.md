@@ -151,22 +151,18 @@ In our qualtrics-AMP [folder](https://github.com/baranan/minno-tasks/tree/master
 
 ### Processing the AMP data
 
-The original [post](https://minnojs.github.io/minnojs-blog/qualtrics/) about running MinnoJS scripts from Qualtrics explains how to process the data saved by Qualtrics. To test the data of my example, Yoav created [this R script](https://github.com/baranan/minno-tasks/blob/master/IAT/qualtrics/minno.qualtrics.iat.process.rmd) and it might help you process and score your own data as well.
+The original [post](https://minnojs.github.io/minnojs-blog/qualtrics/) about running MinnoJS scripts from Qualtrics explains how to process the data saved by Qualtrics. To test the data of my example, Yoav created [this R script](https://github.com/baranan/minno-tasks/blob/master/amp/qualtrics/minno.qualtrics.test.amp.process.rmd) and it might help you process and score your own data as well.
 
-If you don’t feel comfortable using R, here is how to create a csv file with the IAT data, using Excel. 
+If you don’t feel comfortable using R, here is how to create a csv file with the AMP data, using Excel. 
 1. Download the data from Qualtrics as csv.
 2. Open the csv file with Excel
-3. Copy only the cells with BIAT data. For instance, because the BIAT was in Q3 in my Qualtrics questionnaire, the relevant column is under Q3. Select only the cells with that data and copy those cells.
+3. Copy only the cells with AMP data. For instance, because the AMP was in Q1 in my Qualtrics questionnaire, the relevant column is under Q1. Select only the cells with that data and copy those cells.
 4. Open a notepad (or notepad++ or any other simple editor) and paste the data (the cells you copied) to that file.
 5. Replace (usually, using ctrl-H) the text *“block,trial* with the text *block,trial* (to remove the “ before block)
 6. Replace “”” (three double quotes) with “” (two double quotes)
 7. Replace “” (two double quotes) with “ (one double quotes)
 8. Save that file as a csv file
 9. You can open that csv file to make sure that it is fine. 
-
-The steps in an animated gif:
-
-![Data image](https://minnojs.github.io/minnojs-blog/images/processiat.gif)
 
 ### Any questions?
 
