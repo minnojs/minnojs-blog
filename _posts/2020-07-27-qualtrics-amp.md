@@ -19,6 +19,8 @@ The AMP will run from a single question in your survey, separated from any other
 
 ![Qualtrics image](../images/quiat1.png)
 
+Please [Don't forgot](https://minnojs.github.io/minnojs-blog/qualtrics/): The question's type should be “Text Entry”, and you would need to set it up as a multiline question (in the setting box on the right). We need a multiline question because we are going to use a CSV format to save the data, and single line questions do not save new lines. 
+
 After creating that question, click the JS icon in the AMP question, and add the following code: 
 
 ```js
